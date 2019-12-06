@@ -1,2 +1,2 @@
 # ppnelles.com
-My vcard
+My vcard. See it live at http://ppnelles.com
