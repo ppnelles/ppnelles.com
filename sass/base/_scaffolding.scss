@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection { 
+  background: $link-color; 
+  color: white; 
+  text-shadow: none; 
+}
+
+::selection { 
+  background: $link-color; 
+  color: white; 
+  text-shadow: none; 
+}
+
+html {
+  line-height: 1.5;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  margin: 0;
+  background: $bg-color;
+  font-family: $font-family;
+  font-size: calc((16px) + .25vw);
+  font-weight: 400; 
+  color: $text-regular;
+  -webkit-font-smoothing: antialiased;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+
+}
+
+img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+p img {
+  margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+
+.site-content {
+  @include container();
+}

@@ -1,0 +1,73 @@
+b,
+strong {
+	font-weight: 700;
+}
+
+dfn,
+em,
+i,
+cite {
+  font-style: italic;
+}
+
+h1, h2, h3 {
+	font-family: $font-family;
+	font-weight: 700;
+	margin: 0;
+}
+
+
+h1 {
+  font-size: calc(3rem + 1.2vw);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  
+  span {
+  	display: block;
+  }
+}
+
+h2 {
+  font-size: calc(2.6rem + 1vw)
+}
+
+h3 {
+  font-weight: 400;
+  font-size: calc((18px) + .25vw);
+  
+  span {
+  	display: block;
+  }
+}
+
+
+p {
+	margin: 0 0 2rem;
+}
+
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 1.5rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}

@@ -1,0 +1,16 @@
+@mixin container() {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+@mixin reset-list() {
+	margin: 0;
+	padding: 0;
+	
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}

@@ -1,0 +1,46 @@
+a {
+	background-color: transparent;
+	color: $link-color;
+	text-decoration: underline;
+	font-weight: 900;
+	background-color: transparent;
+	transition: all 250ms ease-in-out; 
+	padding: 0 2px;
+
+	&:hover {
+		color: $bg-color;
+		background-color: $link-color;
+		text-decoration: none;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+
+	img {
+		border: none;
+	}
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	background-color: $link-color;
+	color: white;
+	border: none;
+	padding: 1rem;
+	text-decoration: none;
+
+	&:hover {
+
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+	}	
+}
