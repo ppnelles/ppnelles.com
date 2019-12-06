@@ -2,20 +2,108 @@
 
 <html lang="fr-FR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <meta charset="utf-8">
+    <title>Paul-Philippe Nelles</title>
+    <meta name="description" content="I'm a front-end web developper and cyclist from Ovifat (Liège), Belgium">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Paul-Philippe Nelles">
+    <link rel="canonical" href="http://www.ppnelles.com/">
+    <script src="https://kit.fontawesome.com/b131b39e3c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./vcard/style.css">
 </head>
 
-<body> 
-
+<body id="hcard-Paul-Philippe-Nelles" class="h-card">
     <main>
+        <div class="profile-pic">
+            <figure>
+                <a href="http://www.ppnelles.com/" class="u-url" rel="author">
+                    <img class="u-photo" 
+                        src="./vcard/img/paul-philippe-nelles.jpg" 
+                        alt="Picture of Paul-Philippe Nelles">
+                </a> 
+            </figure>
+        </div>
+        <div class="contact-information">
+            <h1>
+                <div>Hello there <span class="hello">👋</span>,</div> <div>I'm <span class="p-given-name">Paul-Philippe</span> <span class="p-family-name">Nelles</span></div></h1> 
+            <p class="about">I'm a <span class="p-job-title">front-end web developper</span> at <a href="http://globulebleu.com/" title="Visit Globule Bleu's website"><span class="p-org">Globule Bleu</span></a>.</p> <p class="hobby">I live at <span class="p-locality">Ovifat</span>, in lovely <span class="p-country-name">Belgium</span> where I love to ride my bikes and cook.</p>
+            <p class="more">
+                Write me at <a class="u-email" href="mailto:ppnelles@gmail.com" title="Send me a postcard darling, send me a postcard now">ppnelles@gmail.com</a> or stalk me there:
+            </p>
+            <div class="links">
+                <span class="point-right">👉</span>
 
+                <ul>
+                    <li>
+                        <a href="http://be.linkedin.com/in/ppnelles/" rel="author" title="Linked In"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ppnelles/" rel="author" title="GitHub"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="http://www.strava.com/athletes/ppnelles/" rel="author" title="Strava"><i class="fab fa-strava"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.zwiftpower.com/profile.php?z=401617" rel="author" title="ZwiftPower"><i class="fas fa-bolt"></i></a>
+                    </li>
+                    <!-- >
+                    <li>
+                        <a href="https://www.betrail.run/runner/nelles.paul.philippe/overview" rel="author" title="Betrail"><i class="fas fa-running"></i></a>
+                    </li> -->
+                    <li>
+                        <a href="http://instagram.com/ppnelles/" rel="author" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="http://www.lastfm.fr/user/Zerthis" rel="author" title="Last.fm"><i class="fab fa-lastfm"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
-    
-   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="./vcard/scripts.min.js"></script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "familyName": "Nelles",
+        "givenName": "Paul-Philippe",
+        "jobTitle": "Front-end Webdevelopper",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Globule Bleu",
+            "url": "http://www.globulebleu.com/"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "HEPL Infographie",
+            "url": "https://www.provincedeliege.be/fr/art560"
+          },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ovifat",
+            "addressRegion": "Liège",
+            "postalCode": "4950",
+            "addressCountry": "Belgium"
+        },
+        "email": "ppnelles@gmail.com",
+        "image": "http://ppnelles.com/vcard/img/paul-philippe-nelles.jpg",
+        "gender": "http://schema.org/Male",
+        "url": "http://ppnelles.com",
+        "sameAs": ["http://be.linkedin.com/in/ppnelles/","http://instagram.com/ppnelles/","http://www.strava.com/athletes/ppnelles/","https://github.com/ppnelles/","http://www.lastfm.fr/user/Zerthis", "https://www.zwiftpower.com/profile.php?z=401617", "https://www.betrail.run/runner/nelles.paul.philippe/overview", "https://www.zwiftpower.com/profile.php?z=401617", "https://www.facebook.com/ppnelles", "https://twitter.com/ppnelles"]
+    }
+    </script>
+
+
+    <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./vcard/scripts.min.js"></script> -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-46068757-1');ga('send','pageview');
+    </script>
 </body>
 </html>

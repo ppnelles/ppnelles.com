@@ -6,9 +6,12 @@ $breakpoints: (
     'screen-xl': 1300px
 );
 
-$font-family: Georgia, Times, "Times New Roman", serif;
+$font-regular: 'Montserrat', sans-serif;
+$font-title: 'Raleway', sans-serif;
 
-$bg-color: red;
-$text-regular: white;
-$text-title: white;
-$link-color: white;
+$text-regular: #666666;
+$link-color: #363636;
+$link-color_hover: #1c4994;
+$border-color: #abb7b7;
+
+$transition-time: 250ms;
