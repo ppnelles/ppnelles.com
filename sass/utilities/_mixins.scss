@@ -14,3 +14,7 @@
 		list-style: none;
 	}
 }
+
+@mixin transition-default($prop: all) {
+	transition: $prop 150ms ease-out;
+}

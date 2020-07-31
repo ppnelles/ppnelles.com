@@ -1,155 +1,217 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Raleway:700&display=swap');
-
-html {
-    line-height: 1.5;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Open+Sans:400,700);
 
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 90%;
-    min-height: 100vh;
-    align-items: center;
-    padding: 0;
-    margin: 0 auto;
-    background: white;
-    font-family: $font-regular;
-    color: $text-regular;
-    font-weight: 400;
-    font-size: calc((18px) + .25vw);
-    /*text-align: center;*/   
-}
-
-a {
-    color: $text-regular;
-    text-decoration: none;
-
-    &:focus,
-    &:active,
-    &:hover {
-        outline: none;
-    }
-
-}
-
-::-moz-selection { 
-  background: $link-color_hover; 
-  color: #fff; 
-  text-shadow: none; 
-}
-
-::selection { 
-  background: $link-color_hover; 
-  color: #fff; 
-  text-shadow: none; 
+  background: #e8e8db url('../vcard/img/bg.jpg') top left repeat;
+  color: #333;
+  padding: 1em 1em 0;
+  margin: 0;
+  font-size: calc(20px + .25vw);
+  text-align: center;
+  
 }
 
 figure {
-    display: block;
-    margin: 0 0 1rem;
+    margin: 0;
     padding: 0;
+}
 
-    img {
-        display: block;
-        width: 150px;
-        height: auto;
-        border: 1px solid $border-color;
-        border-radius: 150px;
+header {
+    display: inline-block;
+    transform: matrix(1, -0.10, 0, 1, 0, 0);
+    
+    figure.profile-pic {
+        text-align: center;
         margin: 0;
-    }
 
-    a {
-        text-decoration: none;
-        color: inherit;
-        cursor: default;
-        transition: all $transition-time ease-out;
+        img {
+            display: inline-block;
+            width: 200px;
+            height: auto;
+            border-radius: 200px;
+            mix-blend-mode: darken;
+            opacity: 0.85;
+            animation: reveal 1.5s ease-in -0.5s;
+        }
+
     }
 }
 
-main {
-    margin: 0.5em 0;
-}
 
 h1 {
-    font-family: $font-title;
+    font-family: "Oswald", Sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: calc(3rem + 1.2vw);
+    line-height: 1;
+    text-shadow: 2px 2px #e3e3dc, 4px 4px #d5bcb6;
+    margin: -70px 0 0;
+    animation: intro 1.25s -1s 1;
+}
+
+h2 {
+    font-family: "Open Sans", Sans-serif;
+    text-transform: uppercase;
     font-weight: 700;
-    font-size: calc(1.625rem + 1.2vw);
-    line-height: 1.25em;
-    margin: 0 ;
-    color: $text-regular;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin: 1em 0;  
+    position: relative;
+    animation: intro 1.45s -1s 1;
 
-    .p-given-name,
-    .p-family-name {
-        color: $link-color;
+    @include mappy-bp(screen-xs) {
+        font-size: calc(1rem + 0.25vw);   
+    }
+
+    &:before, 
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 4px;
+      width: 20px;
+      height: 4px;
+      border-top: 2px solid #555;
+    }
+
+    &:before {
+        margin: 5px 0 0 -30px;
+    }
+
+    &:after {
+       margin: 5px 0 0 10px; 
     }
 }
 
+h3 {
+    font-family: "Open Sans", Sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
 
-p {
-    margin: calc(1rem + 0.5vw) 0 0;
-
-    &.hobby {
-        margin-top: 0;
+    @include mappy-bp(screen-xs) {
+        font-size: calc(1rem + 0.1vw); 
+        letter-spacing: 1px;  
     }
 
-    &.more {
-        margin-bottom: calc(0.5rem + 0.5vw);
-    }
 }
 
-ul {
+ul.links {
     @include reset-list();
-
+    margin: 1em 0 0;
 
     li {
         display: inline-block;
-        margin: 0 calc(0.25em + .5vw);
-        font-size: calc(1.35rem + .5vw);
+        margin: 0 0.25em;
+        animation: reveal 2.75s ease-out -0.5s;
+
+        &:nth-child(2) {
+            animation-delay: -0.5s
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.4s
+        }
+
+        &:nth-child(4) {
+            animation-delay: -0.3s
+        }
+
+        &:nth-child(5) {
+            animation-delay: -0.2s
+        }
+
+        &:nth-child(6) {
+            animation-delay: -0.1s
+        }
+
+        &:nth-child(7) {
+            animation-delay: 0s
+        }
     }
 
     a {
-        transition: color $transition-time ease-in-out;
+        color: #333;
+        text-decoration: none;
+
+        i {
+            @include transition-default();
+            color: #333;
+        }
 
         &:hover {
-            color: $link-color;
+
+            .fa-linkedin-in {
+                color: $c-linkedin;
+            }
+
+            .fa-github {
+                color: black;
+            }
+
+            .fa-strava {
+                color: $c-strava;
+            }
+
+            .fa-bolt {
+                color: $c-zwiftpower;
+            }
+
+            .fa-instagram {
+                color: $c-instagram;
+            }
+
+            .fa-lastfm {
+                color: $c-lastfm;
+            }
+
+            .fa-envelope {
+                color: $c-mail;
+            }
         }
     }
 }
 
+    
+    .job-information {
+        margin: 4em 0 0;
 
-.hello {
-    display: inline-block;
-    animation: wave 2.5s linear 0.5s infinite;
-}
+        h3 {
+            animation: reveal 2.75s ease-out -0.2s;
+        }
 
-.links {
-    display: flex;  
-    align-items: center;
-    /*justify-content: center;*/
-}
+        ul {
+            @include reset-list();
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-.point-right {
-    font-size: calc(2rem + .25vw);
-    position: relative;
-    top: 0px;
-    animation: show 2.5s ease-out 1s infinite;
-    margin: 0 0.25em 0 0;
-}
+            li {
+                width: 50%;
+                max-width: 150px;
+                margin: 0 1em;
 
-.contact-information p a {
-    color: $link-color;
-    position: relative;
-    box-shadow: 0 8px 0 0 rgba($link-color_hover,0), inset 0 -0.125em rgba($link-color_hover,.2);
-    transition: all $transition-time ease-in-out;
-}
+                &:nth-child(1) {
+                    animation: reveal 2.75s ease-out -0.1s;
+                }
 
-.contact-information p a:hover{
-    color: $link-color_hover;
-    box-shadow: 0 1px 0 4px rgba($link-color_hover,.1), inset 0 -1.375em 0 rgba($link-color_hover,.1);
-}
+                &:nth-child(2) {
+                    animation: reveal 2.75s ease-out 0s;
+                }
+            }
 
+            img {
+                @include transition-default();
+                filter: grayscale(100%);
+                mix-blend-mode: multiply;
+                opacity: 0.85;
+                display: block;
+                max-height: 120px;
+                width: auto;
 
+                &:hover {
+                    filter: grayscale(0%);
+                    opacity: 1;
+                    mix-blend-mode: normal;
+                }
+            }
+        }
+    }
